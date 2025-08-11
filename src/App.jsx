@@ -9,6 +9,7 @@ import HomeRecommend from './pages/HomeRecommend'
 import HomeRanking from './pages/HomeRanking'
 import Order from './pages/Order'
 import Category from './pages/Category'
+import HomeSongMenu from './pages/HomeSongMenu'
 
 export function App(props) {
   const navigate = useNavigate()
@@ -53,6 +54,7 @@ export function App(props) {
             <Route path='/home' element={<Navigate to="/home/recommend"></Navigate>}></Route>
             <Route path='/home/recommend' element={<HomeRecommend/>}></Route>
             <Route path='/home/ranking' element={<HomeRanking/>}></Route>
+            <Route path='/home/songmenu' element={<HomeSongMenu/>}></Route>
           </Route>
           <Route path='/about' element={<About/>}></Route>
           <Route path='/login' element={<Login/>}></Route>
