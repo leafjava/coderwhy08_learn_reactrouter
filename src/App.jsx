@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react'
-import {Route,Routes, Link,NavLink, Navigate, useNavigate} from 'react-router-dom'
+import {Route,Routes, Link,NavLink, Navigate, useNavigate, useRoutes} from 'react-router-dom'
 import Home from './pages/Home'
 import About from './pages/About'
 import "./style.css"
@@ -12,6 +12,7 @@ import Category from './pages/Category'
 import HomeSongMenu from './pages/HomeSongMenu'
 import Detail from './pages/Detail'
 import User from './pages/User'
+import routes from './router'
 
 export function App(props) {
   const navigate = useNavigate()
@@ -50,8 +51,7 @@ export function App(props) {
       <div className='content'>
         {/* 映射关系:path => Component */}
 
-        <Routes>
-          {/* <Route path='/' element={<Home/>}></Route> */}
+        {/* <Routes>
           <Route path="/" element={<Navigate to="/home"></Navigate>}></Route>
           <Route path='/home' element={<Home/>}>
             <Route path='/home' element={<Navigate to="/home/recommend"></Navigate>}></Route>
@@ -66,7 +66,8 @@ export function App(props) {
           <Route path='/detail/:id' element={<Detail/>}></Route>
           <Route path='/user' element={<User/>}></Route>
           <Route path='*' element={<NotFound/>}></Route>
-        </Routes>
+        </Routes> */}
+        {useRoutes(routes)}
       </div>
       <div className='footer'>
         <hr/>
