@@ -1,6 +1,16 @@
 import React, { PureComponent } from 'react'
 
 export class HomeRanking extends PureComponent {
+  constructor(props){
+    super(props)
+
+    this.state = {
+      rankingData:[
+        {}
+      ]
+    }
+  }
+
   render() {
     return (
       <div>

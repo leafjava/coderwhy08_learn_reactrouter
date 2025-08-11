@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react'
 import {Route,Routes, Link,NavLink, Navigate, Outlet, useNavigate} from 'react-router-dom'
-import { withRouter } from './hoc'
+import { withRouter } from '../hoc'
 
 export class Home extends PureComponent {
   // const navigate = useNavigate()

@@ -10,6 +10,8 @@ import HomeRanking from './pages/HomeRanking'
 import Order from './pages/Order'
 import Category from './pages/Category'
 import HomeSongMenu from './pages/HomeSongMenu'
+import Detail from './pages/Detail'
+import User from './pages/User'
 
 export function App(props) {
   const navigate = useNavigate()
@@ -40,7 +42,8 @@ export function App(props) {
 
           <button onClick={e => navigateTo('/category')}>分类</button>
           <span onClick={e => navigateTo('/order')}>订单</span>
-
+          
+          <Link to="/user?name=why&age=18">用户</Link>
         </div>
         <hr/>
       </div>
@@ -60,6 +63,8 @@ export function App(props) {
           <Route path='/login' element={<Login/>}></Route>
           <Route path='/category' element={<Category/>}></Route>
           <Route path='/order' element={<Order/>}></Route>
+          <Route path='/detail/:id' element={<Detail/>}></Route>
+          <Route path='/user' element={<User/>}></Route>
           <Route path='*' element={<NotFound/>}></Route>
         </Routes>
       </div>
